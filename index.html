@@ -2,20 +2,21 @@
 <html lang="uk">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Інтернет-агенція &laquo;WebStudio&raquo;</title>
-  <link rel="icon" href="favicon.ico">
-  <link rel="stylesheet" href="styles/normalize.css">
-  <!-- <link rel="stylesheet" href="styles/layout-markup.css"> -->
+  <link rel="icon" href="favicon.ico" />
+  <link rel="stylesheet" href="styles/normalize.css" />
   <!-- <link rel="stylesheet" href="styles/style.css"> -->
 </head>
 
 <body>
 
+  <!-- ЗАГОЛОВОК -->
   <header class="header">
     <a href="#"><span>Web</span>Studio</a>
+
     <nav class="page-navigation">
       <ul>
         <li><a href="#">Студія</a></li>
@@ -23,88 +24,122 @@
         <li><a href="#">Контакти</a></li>
       </ul>
     </nav>
-    <div class="header-contacts">
-      <a href="mailto:info@devstudio.com">info@devstudio.com</a>
-      <a href="tel:+380961111111">+38 096 111 11 11</a>
-    </div>
+    <ul class="header-contacts">
+      <li><a href="mailto:info@devstudio.com">info@devstudio.com</a></li>
+      <li><a href="tel:+380961111111">+38 096 111 11 11</a></li>
+    </ul>
   </header>
 
+  <!-- ОСНОВНА ЧАСТИНА -->
   <main class="main">
-    <h1 class="visually-hidden">Інтернет-агенція з розробки сайтів &laquo;WebStudio&raquo;</h1>
 
+    <!-- Банер для замовлення послуги -->
     <section class="order">
-      <h2 class="visually-hidden">Замовити послугу</h2>
-      <strong>Ефективні рішення для вашого бізнесу</strong>
+      <h1>Ефективні рішення для вашого бізнесу</h1>
       <button type="button">Замовити послугу</button>
     </section>
 
+    <!-- Переваги -->
     <section class="advantages">
       <h2 class="visually-hidden">Наші переваги</h2>
-      <dl>
-        <dt>Увага до деталей</dt>
-        <dd>Ідейні міркування, і навіть початок повсякденної роботи з формування позиції.</dd>
-        <dt>Пунктуальність</dt>
-        <dd>Завдання організації, особливо рамки і місце навчання кадрів тягне у себе.</dd>
-        <dt>Планування</dt>
-        <dd>Так само консультація з широким активом значною мірою зумовлює.</dd>
-        <dt>Сучасні технології</dt>
-        <dd>Значимість цих проблем настільки очевидна, що реалізація планових завдань.</dd>
-      </dl>
-    </section>
-
-    <section class="occupation">
-      <h2>Чим ми займаємося</h2>
       <ul>
-        <li><img src="images/occupation-01.jpg" alt="Програміст за алгоритмом, щось там кодить"></li>
-        <li><img src="images/occupation-02.jpg" alt="Дизайнер створює адаптивну сторінку для смартфона"></li>
-        <li><img src="images/occupation-03.jpg" alt="Дизайнер на планшеті підбирає кольори"></li>
+        <li>
+          <h3>Увага до деталей</h3>
+          <p>
+            Ідейні міркування, і навіть початок повсякденної роботи з
+            формування позиції.
+          </p>
+        </li>
+
+        <li>
+          <h3>Пунктуальність</h3>
+          <p>
+            Завдання організації, особливо рамки і місце навчання кадрів тягне
+            у себе.
+          </p>
+        </li>
+
+        <li>
+          <h3>Планування</h3>
+          <p>
+            Так само консультація з широким активом значною мірою зумовлює.
+          </p>
+        </li>
+
+        <li>
+          <h3>Сучасні технології</h3>
+          <p>
+            Значимість цих проблем настільки очевидна, що реалізація планових
+            завдань.
+          </p>
+        </li>
       </ul>
     </section>
 
+    <!-- Чим ми займаємося -->
+    <section class="occupation">
+      <h2>Чим ми займаємося</h2>
+      <ul>
+        <li>
+          <img src="images/occupation-01.jpg" width="370" height="294" alt="Програміст за алгоритмом, щось там кодить." />
+        </li>
+        <li>
+          <img src="images/occupation-02.jpg" width="370" height="294" alt="Дизайнер створює адаптивну сторінку для смартфона." />
+        </li>
+        <li>
+          <img src="images/occupation-03.jpg" width="370" height="294" alt="Дизайнер на планшеті підбирає кольори." />
+        </li>
+      </ul>
+    </section>
+
+    <!-- Наша команда -->
     <section class="team">
       <h2>Наша команда</h2>
       <ul>
         <li>
-          <ul>
-            <li><img src="images/team-demjanenko.jpg" width="270" height="260" alt="Веселий бородатий хлоп. Перший у списку. Напевно, самий головний!"></li>
-            <li>Ігор Дем'яненко</li>
-            <li>Product Designer</li>
-          </ul>
+          <img src="images/team-demjanenko.jpg" width="270" height="260" alt="Бородатий хлоп." />
+          <h3>Ігор Дем'яненко</h3>
+          <p>Product Designer</p>
         </li>
         <li>
-          <ul>
-            <li><img src="images/team-repina.jpg" width="270" height="260" alt="Файна білявка. Недарма я хочу у фронтендери!"></li>
-            <li>Ольга Рєпіна</li>
-            <li>Frontend Developer</li>
-          </ul>
+          <img src="images/team-repina.jpg" width="270" height="260" alt="Файна білявка." />
+          <h3>Ольга Рєпіна</h3>
+          <p>Frontend Developer</p>
         </li>
         <li>
-          <ul>
-            <li><img src="images/team-tarasov.jpg" width="270" height="260" alt="Маркетолог. Йому весело!"></li>
-            <li>Микола Тарасов</li>
-            <li>Marketing</li>
-          </ul>
+          <img src="images/team-tarasov.jpg" width="270" height="260" alt="Веселий маркетолог." />
+          <h3>Микола Тарасов</h3>
+          <p>Marketing</p>
         </li>
         <li>
-          <ul>
-            <li><img src="images/team-ermakov.jpg" width="270" height="260" alt="Дизайнер. Усі люди як люди, а він сфотався десь в гаражах!"></li>
-            <li>Михайло Єрмаков</li>
-            <li>UI Designer</li>
-          </ul>
+          <img src="images/team-ermakov.jpg" width="270" height="260" alt="Дизайнер на вулиці." />
+          <h3>Михайло Єрмаков</h3>
+          <p>UI Designer</p>
         </li>
       </ul>
     </section>
   </main>
 
+  <!-- ФУТЕР -->
   <footer class="footer">
     <a href="#"><span>Web</span>Studio</a>
-    <address class="footer-contacts">
-      <span>м. Київ, пр-т Лесі Українки, 26</span><br>
-      <a href="mailto:info@devstudio.com">info@devstudio.com</a><br>
-      <a href="tel:+380961111111">+38 096 111 11 11</a>
-    </address>
-  </footer>
 
+    <!--
+      Я вагався брати контент в тезі <adress> у список чи ні, бо чомусь вирішив, що влкадений список в даному тезі не дуже підходить.
+      https://developer.mozilla.org/ru/docs/Web/HTML/Element/address
+    -->
+
+    <address class="footer-contacts">
+      <ul>
+        <!-- Також плутаюсь, чи варто обертати саме адресу у тег <span>,
+          чи оставляємо як є й в подальшому будемо надавати стилі через <li> -->
+        <li>м. Київ, пр-т Лесі Українки, 26</li>
+        <li><a href="mailto:info@devstudio.com">info@devstudio.com</a></li>
+        <li><a href="tel:+380961111111">+38 096 111 11 11</a></li>
+      </ul>
+    </address>
+
+  </footer>
 </body>
 
 </html>
