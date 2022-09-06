@@ -7,7 +7,7 @@ _Закінчення – 18 вересня 2022 р._
 
 Посилання на макет – [pdf >>>](/files/webstudio.pdf)
 
-Посилання на макет – [figma >>>](https://www.figma.com/file/epRDm7u80zn0M4hxdTxo2n/Web-Studio-Version-2.1)
+Посилання на макет – [figma >>>](/files/webstudio.fig)
 
 ## 1-й тиждень. Модуль 1.
 
