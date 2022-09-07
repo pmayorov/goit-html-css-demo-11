@@ -1,0 +1,36 @@
+header,
+main,
+footer,
+nav {
+    border: 1px solid red;
+}
+
+div, form {
+    border: 1px solid rgb(102, 2, 57);
+}
+
+ul,
+li,
+ol,
+dl,
+dt,
+dd
+{
+    border: 1px solid grey;
+}
+
+h1,
+h2,
+p,
+a,
+span {
+    border: 1px dashed rgb(59, 116, 182);
+}
+
+img {
+    border: 1px dashed rgb(20, 212, 107);   
+}
+
+section {
+    border: 1px dotted rgb(218, 115, 46);  
+}
