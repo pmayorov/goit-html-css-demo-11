@@ -70,15 +70,39 @@ body {
   box-sizing: border-box;
 }
 
-.container {
-  width: 1170px;
-  margin: 0 auto;
-}
+/* Зовнішні wrapper-оболочки для секцій. Створені щоб можно було задавати макетні фони, або прибирати їх на будь якій інформаційній секіції. В секціях з фоном присутні padding-top padding-bottm. */
 
-.wide-container {
+.dark-wrapper {
   background-color: #2f303a;
   color: #ffffff;
   padding: 60px 0;
+}
+
+.light-wrapper {
+  background-color: #ffffff;
+  padding: 94px 0;
+}
+
+.grey-wrapper {
+  background-color: #f5f4fa;
+  padding: 94px 0;
+}
+
+/* Якщо wrapper-оболонки з однаковим кольором фону йдуть одна за одною, обнуляємо один з padding-ів. Інакше padding-и додаються й виходит велика візуальна відстань між секціями з однаковим фоновим кольором */
+
+.grey-wrapper + .grey-wrapper {
+  padding-top: 0;
+}
+
+.light-wrapper + .light-wrapper {
+  padding-top: 0;
+}
+
+/* Внутрішній контейнер для семантичної секціі, який задає ширину для інформаційного контенту й центрує його */
+
+.container {
+  width: 1170px;
+  margin: 0 auto;
 }
 
 .navigation-list {
@@ -96,6 +120,10 @@ body {
   text-decoration: none;
 }
 
+.footer .navigation-link {
+  color: #ffffff;
+}
+
 .section-title {
   margin: 0;
   padding: 0;
@@ -107,15 +135,49 @@ body {
   text-align: center;
 }
 
-.main {
-  padding-bottom: 94px;
+/** .main {} */
+
+/* Стилізація :hover :focus станів */
+
+.navigation-link:hover,
+.navigation-link:focus,
+.footer-contacts:hover,
+.footer-contacts:focus {
+  color: #2196f3;
+  outline: none;
+}
+
+.logotype:focus-visible {
+  outline: 1px solid #2196f3;
+  outline-offset: 0.3em;
+  border-radius: 0.03em;
+}
+
+.button:hover,
+.button:focus-visible {
+  cursor: pointer;
+  background: #188ce8;
+  outline: none;
+}
+
+.button:focus-visible {
+  cursor: pointer;
+  background: #188ce8;
+  outline: 1px solid rgba(255, 255, 255, 0.6);
+  outline-offset: 0.3em;
+  border-radius: 0.03em;
+}
+
+.clients-link:hover .clients-icon,
+.clients-link:focus .clients-icon {
+  border-color: #2196f3;
 }
 
 /* ЗАГОЛОВОК */
 
 .logotype {
   display: inline-block;
-  font-family: "Raleway";
+  font-family: "Raleway", sans-serif;
   font-size: 26px;
   line-height: 31px;
   font-weight: 700;
@@ -124,7 +186,7 @@ body {
   letter-spacing: 0.03em;
 }
 
-.logotype span {
+.logotype .highlight-logo {
   color: #2196f3;
 }
 
@@ -156,26 +218,10 @@ body {
   color: #757575;
 }
 
-.navigation-link:hover,
-.navigation-link:focus,
-.footer-contacts:hover,
-.footer-contacts:focus,
-.navigation-link:focus,
-.footer-contacts:focus {
-  color: #2196f3;
-  outline: none;
-}
-
-.logotype:focus-visible {
-  outline: 1px solid #2196f3;
-  outline-offset: 0.3em;
-  border-radius: 0.03em;
-}
-
 /* ОСНОВНА ЧАСТИНА */
 
 /* Банер для замовлення послуги */
-.promo {
+.promo-image {
   background-image: url("../images/promo.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -217,30 +263,11 @@ body {
   letter-spacing: 0.06em;
 }
 
-.button:hover,
-.button:focus-visible {
-  cursor: pointer;
-  background: #188ce8;
-  outline: none;
-}
-
-.button:focus-visible {
-  cursor: pointer;
-  background: #188ce8;
-  outline: 1px solid rgba(255, 255, 255, 0.6);
-  outline-offset: 0.3em;
-  border-radius: 0.03em;
-}
-
 /* Переваги */
 
-.advantages {
-  padding-top: 94px;
-}
+/** .advantages {} */
 
 .advantages-list {
-  counter-reset: section;
-  margin-top: 25px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   column-gap: 30px;
@@ -250,9 +277,11 @@ body {
   display: block;
   width: 100%;
   height: 120px;
+  border-radius: 4px;
   margin-bottom: 55px;
+  background: #f5f4fa;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: auto;
   background-position: center;
 }
 
@@ -294,9 +323,8 @@ body {
 }
 
 /* Чим ми займаємося */
-.occupation {
-  padding-top: 94px;
-}
+
+/** .occupation {} */
 
 .occupation-list {
   display: grid;
@@ -304,11 +332,15 @@ body {
   column-gap: 30px;
 }
 
+/* Додав цей клас оскільки img штука інлайнова то має знизу якийсь відступ. Після перетворення у блочну модель цей зайвий відступ знизу зникає.   */
+
+.occupation-image {
+  display: block;
+}
+
 /* Наша команда */
 
-.team {
-  padding-top: 94px;
-}
+/** .team {} */
 
 .team-list {
   display: grid;
@@ -320,6 +352,7 @@ body {
   display: flex;
   flex-direction: column;
   padding-bottom: 30px;
+  background-color: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
@@ -354,20 +387,63 @@ body {
   color: #757575;
 }
 
+/* Постійні клієнти */
+
+.clients-list {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  column-gap: 30px;
+}
+
+.clients-icon {
+  display: block;
+  width: 100%;
+  height: 92px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center;
+}
+
+.navigation-item:nth-of-type(1) .clients-icon {
+  background-image: url("../images/client-01.svg");
+}
+
+.navigation-item:nth-of-type(2) .clients-icon {
+  background-image: url("../images/client-02.svg");
+}
+
+.navigation-item:nth-of-type(3) .clients-icon {
+  background-image: url("../images/client-03.svg");
+}
+
+.navigation-item:nth-of-type(4) .clients-icon {
+  background-image: url("../images/client-04.svg");
+}
+
+.navigation-item:nth-of-type(5) .clients-icon {
+  background-image: url("../images/client-05.svg");
+}
+
+.navigation-item:nth-of-type(6) .clients-icon {
+  background-image: url("../images/client-06.svg");
+}
+
 /* ФУТЕР */
 
-.container-footer {
+.footer {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   column-gap: 30px;
 }
 
-.container-footer .logotype {
+.footer .logotype {
   color: inherit;
   margin-bottom: 20px;
 }
 
-.container-footer .navigation-item + .navigation-item {
+.footer .navigation-item + .navigation-item {
   margin-top: 9px;
 }
 
