@@ -70,27 +70,80 @@ body {
   box-sizing: border-box;
 }
 
-svg path {
-  fill: inherit;
-  stroke: inherit;
+.button {
+  display: inline-block;
+  box-sizing: border-box;
+  height: 50px;
+  border-width: 0;
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  background-color: #2196f3;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 30px;
+  letter-spacing: 0.06em;
+}
+
+.button:hover,
+.button:focus-visible {
+  cursor: pointer;
+  background: #188ce8;
+  outline: none;
+}
+
+.button:focus-visible {
+  cursor: pointer;
+  background: #188ce8;
+  outline: 1px solid rgba(255, 255, 255, 0.6);
+  outline-offset: 0.3em;
+  border-radius: 0.03em;
+}
+
+.input {
+  box-sizing: border-box;
+  width: 358px;
+  height: 50px;
+  padding: 10px 16px;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  font-size: 22px;
+}
+
+.input:hover,
+.input:focus,
+.input:active {
+  outline: none;
+  border-color: #2196f3;
 }
 
 /* Зовнішні wrapper-оболочки для секцій. Створені щоб можно було задавати макетні фони, або прибирати їх на будь якій інформаційній секіції. В секціях з фоном присутні padding-top padding-bottm. */
 
 .dark-wrapper {
-  background-color: #2f303a;
-  color: #ffffff;
   padding: 60px 0;
+  color: #ffffff;
+  background-color: #2f303a;
+}
+
+.dark-wrapper .navigation-link {
+    color: #ffffff;
+}
+
+.dark-wrapper .input {
+  caret-color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.6);
 }
 
 .light-wrapper {
-  background-color: #ffffff;
   padding: 94px 0;
+  background-color: #ffffff;
 }
 
 .grey-wrapper {
-  background-color: #f5f4fa;
   padding: 94px 0;
+  background-color: #f5f4fa;
 }
 
 /* Якщо wrapper-оболонки з однаковим кольором фону йдуть одна за одною, обнуляємо один з padding-ів. Інакше padding-и додаються й виходит велика візуальна відстань між секціями з однаковим фоновим кольором */
@@ -125,10 +178,6 @@ svg path {
   text-decoration: none;
 }
 
-.footer .navigation-link {
-  color: #ffffff;
-}
-
 .section-title {
   margin: 0;
   padding: 0;
@@ -138,6 +187,17 @@ svg path {
   line-height: 42px;
   letter-spacing: 0.03em;
   text-align: center;
+}
+
+.section-sub-title {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
 }
 
 /** .main {} */
@@ -154,21 +214,6 @@ svg path {
 
 .logotype:focus-visible {
   outline: 1px solid #2196f3;
-  outline-offset: 0.3em;
-  border-radius: 0.03em;
-}
-
-.button:hover,
-.button:focus-visible {
-  cursor: pointer;
-  background: #188ce8;
-  outline: none;
-}
-
-.button:focus-visible {
-  cursor: pointer;
-  background: #188ce8;
-  outline: 1px solid rgba(255, 255, 255, 0.6);
   outline-offset: 0.3em;
   border-radius: 0.03em;
 }
@@ -259,19 +304,9 @@ svg path {
   text-align: center;
 }
 
-.button {
-  display: inline-block;
-  width: 216px;
-  height: 50px;
-  border-width: 0;
-  border-radius: 4px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  background-color: #2196f3;
-  color: #ffffff;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 30px;
-  letter-spacing: 0.06em;
+.order .button {
+  min-width: 216px;
+  padding: 1px 32px;
 }
 
 /* Переваги */
@@ -310,17 +345,6 @@ svg path {
 
 .navigation-item:nth-of-type(4) .advantages-icon {
   background-image: url("../images/astronaut.svg");
-}
-
-.advantages-sub-title {
-  margin: 0;
-  padding: 0;
-  margin-bottom: 10px;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 16px;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
 }
 
 .advantages-text {
@@ -417,10 +441,14 @@ svg path {
   background-size: auto;
 }
 
-.social-list .navigation-link:hover {
-  background-color: #2196f3;
+.footer .social-list .navigation-link {
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
+.social-list .navigation-link:hover,
+.social-list .navigation-link:focus {
+  background-color: #2196f3;
+}
 
 /* Постійні клієнти */
 
@@ -452,6 +480,7 @@ svg path {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   column-gap: 30px;
+  /* color: #ffffff; */
 }
 
 .footer .logotype {
@@ -459,11 +488,15 @@ svg path {
   margin-bottom: 20px;
 }
 
-.footer .navigation-item + .navigation-item {
+/* .footer .navigation-link {
+
+} */
+
+.footer .address .navigation-item + .navigation-item {
   margin-top: 9px;
 }
 
-.footer-address {
+.footer .address {
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -474,4 +507,47 @@ svg path {
 .footer-contacts {
   text-decoration: none;
   color: rgba(255, 255, 255, 0.6);
+}
+
+.footer .section-sub-title {
+  /* Оці  margin-top: 12px; є костиль! Взагалі потрібно усі сусідні заголовки в футері посадити на базову лінію. А оскількі лівий логотип більше, то трохи все й поїхало. За замовчуванням й з огляду на розмітку все рівняється поверху Іншого варіанту не додумав - втомився, тому поки що так. Якщо розміри заголовків зміняться знову тре буде міняти */
+  margin-top: 12px;
+  margin-bottom: 20px;
+}
+
+.footer .social-list {
+  justify-content: flex-start;
+  column-gap: 10px;
+}
+
+.address-area {
+  grid-column: 1 / 2;
+}
+
+.social-area {
+  grid-column: 2 / 3;
+}
+
+.maillist-area {
+  grid-column: span 2;
+}
+
+.maillist {
+  display: flex;
+  column-gap: 12px;
+}
+
+.maillist .button {
+  padding: 1px 28px;
+}
+
+.button .telegram-ico {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  margin-left: 10px;
+  vertical-align: middle;
+  background-image: url("../images/telegram-ico.svg");
+  background-repeat: no-repeat;
+  background-position: center;
 }
