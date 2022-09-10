@@ -88,16 +88,21 @@ body {
 .button:hover,
 .button:focus-visible {
   cursor: pointer;
-  background: #188ce8;
-  outline: none;
+  background-color: #188ce8;
 }
 
-.button:focus-visible {
-  cursor: pointer;
-  background: #188ce8;
+.button:focus-visible,
+.filter-button:focus-visible {
   outline: 1px solid rgba(255, 255, 255, 0.6);
   outline-offset: 0.3em;
-  border-radius: 0.03em;
+}
+
+.filter-button:hover,
+.filter-button:focus-visible {
+  color: #ffffff;
+  background-color: #2196f3;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .input {
@@ -128,7 +133,7 @@ body {
 }
 
 .dark-wrapper .navigation-link {
-    color: #ffffff;
+  color: #ffffff;
 }
 
 .dark-wrapper .input {
@@ -242,13 +247,25 @@ body {
   letter-spacing: 0.03em;
 }
 
+.header .logotype {
+  margin: auto 0;
+}
+
 .logotype .highlight-logo {
   color: #2196f3;
 }
 
 .header {
+  position: relative;
   display: flex;
-  padding: 32px 0;
+  min-height: 80px;
+}
+
+/* Підкреслюю [header] наданням секії [main] border-top. ХЗ наскілки це норм рішення? Хеадер знизу не підкреслюю оскільки він стилізован не на всю ширину [body]а лінію за макетом треба на всю ширину сторінки */
+
+.border-top {
+  border-top: 1px solid #ececec;
+  margin-top: -1px;
 }
 
 .page-navigation {
@@ -276,10 +293,7 @@ body {
 
 .this-page {
   cursor: default;
-}
-
-.this-page:hover {
-  color: initial;
+  color: #2196f3;
 }
 
 /* ОСНОВНА ЧАСТИНА */
@@ -375,7 +389,10 @@ body {
   column-gap: 30px;
 }
 
-.occupation-inner-box {
+.relative-box {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   position: relative;
 }
 
@@ -395,8 +412,9 @@ body {
 }
 
 /* Додав цей клас оскільки img штука інлайнова то має знизу якийсь відступ. Після перетворення у блочну модель цей зайвий відступ знизу зникає.   */
+/*todo щось ім'я мені не подобається  */
 
-.occupation-image {
+.image-block {
   display: block;
 }
 
@@ -451,13 +469,13 @@ body {
 
 /* Команда - картки - соціальні мережі */
 
- .social-list {
+.social-list {
   display: flex;
   justify-content: space-between;
   margin-top: 16px;
 }
 
-/* Закостилив паддінги від країв картки, окількі виніс кнопки соцмереж за обгортку team-inner-box, щоб ці кнопки позиціюнувались знизу при різнії кількості інфи в картках то */
+/* Закостилив паддінги від країв картки, окількі виніс кнопки соцмереж за обгортку team-inner-box, щоб ці кнопки позиціюнувались знизу при різнії кількості інфи в картках */
 
 .team-list .social-list {
   padding: 0 32px;
@@ -507,23 +525,125 @@ body {
   border-radius: 4px;
 }
 
+/* ПОРТФОЛІО */
+.portfolio {
+  padding: 94px 0;
+}
+
+.product-filter {
+  padding-bottom: 50px;
+}
+
+.filter-list {
+  display: flex;
+  justify-content: center;
+  column-gap: 8px;
+}
+
+.cards-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.cards-item {
+  display: flex;
+  flex-direction: column;
+  width: 370px;
+  height: 404px;
+  border: 1px solid #eeeeee;
+}
+
+.cards-link {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-decoration: none;
+  flex-grow: 1;
+}
+
+.padding-box {
+  padding: 0 24px;
+  margin: auto 0;
+  overflow: hidden;
+}
+
+.filter-button {
+  height: 38px;
+  padding: 0 25px;
+  color: initial;
+  box-shadow: initial;
+  background-color: #f5f4fa;
+  line-height: 26px;
+}
+
+/*! Костильні правила. */
+/* Заплутався в стилізації схожих елементів. Виходить що почав переназначати схожі стилі, криво схрежувати й з найменуваннями вже почалась чехарда! */
+
+.cards-sub-title {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 4px;
+  color: #212121;
+  font-size: 18px;
+  letter-spacing: 0.06em;
+  line-height: 200%;
+}
+
+.cards-text {
+  line-height: 188%;
+  text-align: left;
+}
+
+.hover-box {
+  position: absolute;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 24px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #2196f3;
+  opacity: 0.9;
+  z-index: -1;
+}
+
+.hover-text {
+  color: #ffffff;
+  font-size: 18px;
+  line-height: 156%;
+  margin: 0;
+}
+
+.hover-text + .hover-text {
+  margin-top: 0.7em;
+}
+
+.cards-link:hover .hover-box,
+.cards-link:focus-visible .hover-box {
+  z-index: 2;
+}
+
+.cards-link:focus-visible {
+  outline: none;
+}
+
 /* ФУТЕР */
 
 .footer {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   column-gap: 30px;
-  /* color: #ffffff; */
 }
 
 .footer .logotype {
   color: inherit;
   margin-bottom: 20px;
 }
-
-/* .footer .navigation-link {
-
-} */
 
 .footer .address .navigation-item + .navigation-item {
   margin-top: 9px;
