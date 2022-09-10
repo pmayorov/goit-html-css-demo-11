@@ -209,6 +209,7 @@ body {
 
 /* Стилізація :hover :focus станів */
 
+
 .navigation-link:hover,
 .navigation-link:focus,
 .footer-contacts:hover,
@@ -235,6 +236,30 @@ body {
 }
 
 /* ЗАГОЛОВОК */
+
+/* Лінія знизу в меню хедера */
+
+.page-navigation .navigation-link {
+  position: relative;
+}
+
+.page-navigation .navigation-link::after {
+  content: "";
+  display: block;
+  border-bottom: 4px solid #2196f3;
+  border-radius: 2px;
+  width: 0px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+}
+
+.page-navigation .navigation-link:hover::after,
+.page-navigation .navigation-link:focus::after {
+  width: 100%;
+  left: 0;
+  top: 44px;
+}
 
 .logotype {
   display: inline-block;
@@ -704,3 +729,4 @@ body {
   background-repeat: no-repeat;
   background-position: center;
 }
+
