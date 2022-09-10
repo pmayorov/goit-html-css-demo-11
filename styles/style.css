@@ -254,8 +254,8 @@ body {
   left: 50%;
 }
 
-.page-navigation .navigation-link:hover::after,
-.page-navigation .navigation-link:focus::after {
+.page-navigation .navigation-link:not(.this-page):hover::after,
+.page-navigation .navigation-link:not(.this-page):focus::after {
   width: 100%;
   left: 0;
   top: 44px;
