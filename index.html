@@ -16,7 +16,7 @@
 <body>
   <!-- ЗАГОЛОВОК -->
   <header class="container header">
-    <a class="logotype" href="#"><span class="highlight-logo">Web</span>Studio</a>
+    <a class="logotype"><span class="highlight-logo">Web</span>Studio</a>
 
     <nav class="page-navigation">
       <ul class="navigation-list header-list">
@@ -24,7 +24,7 @@
           <a class="navigation-link" href="#">Студія</a>
         </li>
         <li class="navigation-item">
-          <a class="navigation-link" href="#">Портфоліо</a>
+          <a class="navigation-link" href="portfolio.html">Портфоліо</a>
         </li>
         <li class="navigation-item">
           <a class="navigation-link" href="#">Контакти</a>
@@ -101,13 +101,22 @@
         <h2 class="section-title">Чим ми займаємося</h2>
         <ul class="navigation-list occupation-list">
           <li class="navigation-item">
-            <img class="occupation-image" src="images/occupation-01.jpg" width="370" height="294" alt="Програміст за алгоритмом, щось там кодить." />
+            <div class="occupation-inner-box">
+              <h3 class="section-sub-title occupation-sub-title">Десктопні додатки</h3>
+              <img class="occupation-image" src="images/occupation-01.jpg" width="370" height="294" alt="Програміст за алгоритмом, щось там кодить." />
+            </div>
           </li>
           <li class="navigation-item">
-            <img class="occupation-image" src="images/occupation-02.jpg" width="370" height="294" alt="Дизайнер створює адаптивну сторінку для смартфона." />
+            <div class="occupation-inner-box">
+              <h3 class="section-sub-title occupation-sub-title">Мобільні додатки</h3>
+              <img class="occupation-image" src="images/occupation-02.jpg" width="370" height="294" alt="Дизайнер створює адаптивну сторінку для смартфона." />
+            </div>
           </li>
           <li class="navigation-item">
-            <img class="occupation-image" src="images/occupation-03.jpg" width="370" height="294" alt="Дизайнер на планшеті підбирає кольори." />
+            <div class="occupation-inner-box">
+              <h3 class="section-sub-title occupation-sub-title">Дизайнерські рішення</h3>
+              <img class="occupation-image" src="images/occupation-03.jpg" width="370" height="294" alt="Дизайнер на планшеті підбирає кольори." />
+            </div>
           </li>
         </ul>
       </section>
@@ -121,7 +130,7 @@
           <li class="navigation-item">
             <img class="team-image" src="images/team-demjanenko.jpg" width="270" height="260" alt="Бородатий хлоп." />
             <!-- В разметку добавил DIV который вместе со всем дочерним контентом центрируется вертикально если в соседних карточках идет переполнение информации -->
-            <div class="desc-box">
+            <div class="team-inner-box">
               <h3 class="team-sub-title">Ігор Дем'яненко</h3>
               <p class="team-text" lang="en">Product Designer</p>
               <!-- Посилання на соцмережі робітника -->
@@ -144,7 +153,7 @@
 
           <li class="navigation-item">
             <img class="team-image" src="images/team-repina.jpg" width="270" height="260" alt="Файна білявка." />
-            <div class="desc-box">
+            <div class="team-inner-box">
               <h3 class="team-sub-title">Ольга Рєпіна</h3>
               <p class="team-text" lang="en">Frontend Developer</p>
               <!-- Посилання на соцмережі робітника -->
@@ -166,7 +175,7 @@
           </li>
           <li class="navigation-item">
             <img class="team-image" src="images/team-tarasov.jpg" width="270" height="260" alt="Веселий маркетолог." />
-            <div class="desc-box">
+            <div class="team-inner-box">
               <h3 class="team-sub-title">Микола Тарасов</h3>
               <p class="team-text" lang="en">Marketing</p>
               <!-- Посилання на соцмережі робітника -->
@@ -188,7 +197,7 @@
           </li>
           <li class="navigation-item">
             <img class="team-image" src="images/team-ermakov.jpg" width="270" height="260" alt="Дизайнер на вулиці." />
-            <div class="desc-box">
+            <div class="team-inner-box">
               <h3 class="team-sub-title">Михайло Єрмаков</h3>
               <p class="team-text" lang="en">UI Designer</p>
               <!-- Посилання на соцмережі робітника -->

@@ -367,6 +367,23 @@ body {
   column-gap: 30px;
 }
 
+.occupation-inner-box {
+  position: relative;
+}
+
+.occupation-sub-title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 27px 0;
+  color: #ffffff;
+  background: rgba(47, 48, 58, 0.8);
+  text-align: center;
+}
+
 /* Додав цей клас оскільки img штука інлайнова то має знизу якийсь відступ. Після перетворення у блочну модель цей зайвий відступ знизу зникає.   */
 
 .occupation-image {
@@ -398,7 +415,7 @@ body {
   margin-bottom: 30px;
 }
 
-.desc-box {
+.team-inner-box {
   margin: auto 0;
   padding: 0 32px;
 }
