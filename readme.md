@@ -35,3 +35,4 @@ _Закінчення – 18 вересня 2022 р._
 **День 14 (неділя) 18:00** – дедлайн здачі ДЗ №2 та о 19:00 фінальний вебінар (тривалість 1,5 години). Підсумки результатів демо-курсу.
 
 Робота на перевірку розміщалась на [netlify >>>](https://pmayorov-goit-markup-hw-02.netlify.app/#)
+Перевірка на валідність – [https://validator.w3.org](https://validator.w3.org/nu/?doc=https%3A%2F%2Fpmayorov-goit-markup-hw-02.netlify.app%2F%23)
