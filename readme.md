@@ -36,4 +36,6 @@ _Закінчення – 18 вересня 2022 р._
 ---
 
 - Робота на перевірку розміщалась на [netlify >>>](https://pmayorov-goit-markup-hw-02.netlify.app/#)
-- Перевірка на валідність – [https://validator.w3.org](https://validator.w3.org/nu/?doc=https%3A%2F%2Fpmayorov-goit-markup-hw-02.netlify.app%2F%23)
+- Перевірка на валідність на [https://validator.w3.org](https://validator.w3.org)
+  * [Головна](https://validator.w3.org/nu/?doc=https%3A%2F%2Fpmayorov-goit-markup-hw-02.netlify.app%2F%23)
+  * [Портфоліо](https://validator.w3.org/nu/?doc=https%3A%2F%2Fpmayorov-goit-markup-hw-02.netlify.app%2Fportfolio.html)
