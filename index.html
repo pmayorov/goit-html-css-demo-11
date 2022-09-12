@@ -8,6 +8,7 @@
   <title>Інтернет-агенція &laquo;WebStudio&raquo;</title>
   <link rel="icon" href="favicon.ico" />
   <link rel="stylesheet" href="styles/normalize.css" />
+  <link rel="stylesheet" href="styles/fonts.css" />
   <link rel="stylesheet" href="styles/style.css" />
   <link rel="stylesheet" href="styles/svg.css" />
 </head>
@@ -16,7 +17,6 @@
   <!-- ЗАГОЛОВОК -->
   <header class="container header">
     <a class="logotype this-page" title="Поточна сторінка"><span class="highlight-logo">Web</span>Studio</a>
-
     <nav class="page-navigation">
       <ul class="navigation-list header-list">
         <li class="navigation-item">
@@ -32,13 +32,14 @@
     </nav>
     <ul class="navigation-list header-list">
       <li class="navigation-item">
-        <a class="navigation-link navigation-contacts" href="mailto:info@devstudio.com">info@devstudio.com</a>
+        <a class="navigation-link navigation-contacts" href="mailto:info@devstudio.com"><span class="letter-ico"></span>info@devstudio.com</a>
       </li>
       <li class="navigation-item">
-        <a class="navigation-link navigation-contacts" href="tel:+380961111111">+38 096 111 11 11</a>
+        <a class="navigation-link navigation-contacts" href="tel:+380961111111"><span class="phone-ico"></span>+38 096 111 11 11</a>
       </li>
     </ul>
   </header>
+  </div>
 
   <!-- ОСНОВНА ЧАСТИНА -->
   <main>
@@ -54,7 +55,7 @@
     </div>
 
     <!-- Переваги -->
-    <div class="light-wrapper">
+    <div class="white-wrapper">
       <section class="container">
         <h2 class="visually-hidden">Наші переваги</h2>
         <ul class="navigation-list advantages-list">
@@ -94,7 +95,7 @@
     </div>
 
     <!-- Чим ми займаємося -->
-    <div class="light-wrapper">
+    <div class="white-wrapper">
       <section class="container">
         <h2 class="section-title">Чим ми займаємося</h2>
         <ul class="navigation-list occupation-list">
@@ -127,18 +128,22 @@
     </div>
 
     <!-- Наша команда -->
-    <div class="grey-wrapper">
+    <div class="light-wrapper ">
       <section class="container">
         <h2 class="section-title">Наша команда</h2>
         <ul class="navigation-list team-list">
           <li class="navigation-item">
             <img class="team-image" src="images/team-demjanenko.jpg" width="270" height="260" alt="Бородатий хлоп." />
-            <!-- В разметку добавил DIV который вместе со всем дочерним контентом центрируется вертикально если в соседних карточках идет переполнение информации -->
+
+            <!-- У розмітку додав DIV котрий разом з усім дочірнім контентом центрується вертикально якщо в сусідніх картках має місце переповнення інформації -->
+
             <div class="team-inner-box">
               <h3 class="team-sub-title">Ігор Дем'яненко</h3>
               <p class="team-text" lang="en">Product Designer</p>
             </div>
+
             <!-- Посилання на соцмережі. Окремо від інфи про team-person бо якщо кількість інфи про кожного з них буде різна й багато тоді "кнопочки" вирівнюються знизу карточки -->
+
             <ul class="navigation-list social-list">
               <li class="navigation-item">
                 <a class="navigation-link instagram-ico" href="#"><span class="visually-hidden">Інстаграм</span></a>
@@ -226,7 +231,7 @@
     </div>
 
     <!-- Постійні клієнти -->
-    <div class="light-wrapper">
+    <div class="white-wrapper">
       <section class="container">
         <h2 class="section-title">Постійні клієнти</h2>
 
@@ -300,7 +305,7 @@
         <address class="address">
           <ul class="navigation-list">
             <li class="navigation-item">
-              <a class="navigation-link" href="https://goo.gl/maps/JBjCmAGv6qrL9rGS9" target="_blank">м. Київ, пр-т Лесі Українки, 26</a>
+              <a class="footer-address" href="https://goo.gl/maps/JBjCmAGv6qrL9rGS9" target="_blank">м. Київ, пр-т Лесі Українки, 26</a>
             </li>
             <li class="navigation-item">
               <a class="footer-contacts" href="mailto:info@devstudio.com">info@devstudio.com</a>

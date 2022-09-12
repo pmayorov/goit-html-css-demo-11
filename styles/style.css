@@ -1,51 +1,21 @@
-@font-face {
-  font-family: "Roboto";
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-  src: url("../fonts/roboto-400.woff2") format("woff2"),
-    url("../fonts/roboto-400.woff") format("woff"),
-    url("../fonts/roboto-400.ttf") format("truetype");
-}
+:root {
+  /* Кольори проекту */
 
-@font-face {
-  font-family: "Roboto";
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-  src: url("../fonts/roboto-500.woff2") format("woff2"),
-    url("../fonts/roboto-500.woff") format("woff"),
-    url("../fonts/roboto-500.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "Roboto";
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-  src: url("../fonts/roboto-700.woff2") format("woff2"),
-    url("../fonts/roboto-700.woff") format("woff"),
-    url("../fonts/roboto-700.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "Roboto";
-  font-weight: 900;
-  font-style: normal;
-  font-display: swap;
-  src: url("../fonts/roboto-900.woff2") format("woff2"),
-    url("../fonts/roboto-900.woff") format("woff"),
-    url("../fonts/roboto-900.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "Raleway";
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-  src: url("../fonts/raleway-700.woff2") format("woff2"),
-    url("../fonts/raleway-700.woff") format("woff"),
-    url("../fonts/raleway-700.ttf") format("truetype");
+  --body-font-size: 14px;
+  --main-color: #212121;
+  --secondary-color: #757575;
+  --hover-color: #2196f3;
+  --active-color: #188ce8;
+  --logos-color: #afb1b8;
+  --white-color: #ffffff;
+  --rgba-white-color: 255, 255, 255;
+  --light-background: #f5f4fa;
+  --dark-background: #2f303a;
+  /* Ширина контентної частини сайту */
+  --content-width: 1170px;
+  /* Вертикальні паддінги між секціями на сторінці*/
+  --vertical-padding: 94px;
+  /* var(--param); */
 }
 
 .visually-hidden {
@@ -62,11 +32,12 @@
 }
 
 body {
-  min-width: 1170px;
+  min-width: var(--content-width);
   font-family: "Roboto", sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  color: #212121;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  color: var(--main-color);
   box-sizing: border-box;
 }
 
@@ -77,32 +48,31 @@ body {
   border-width: 0;
   border-radius: 4px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  background-color: #2196f3;
-  color: #ffffff;
+  background-color: var(--hover-color);
+  color: var(--white-color);
   font-weight: 700;
   font-size: 16px;
-  line-height: 30px;
+  line-height: 1.88;
   letter-spacing: 0.06em;
 }
 
 .button:hover,
 .button:focus-visible {
   cursor: pointer;
-  background-color: #188ce8;
+  background-color: var(--active-color);
 }
 
 .button:focus-visible,
 .filter-button:focus-visible {
-  outline: 1px solid rgba(255, 255, 255, 0.6);
+  outline: 1px solid rgba(var(--rgba-white-color), 0.6);
   outline-offset: 0.3em;
 }
 
 .filter-button:hover,
 .filter-button:focus-visible {
-  color: #ffffff;
-  background-color: #2196f3;
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);
+  color: var(--white-color);
+  background-color: var(--hover-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .input {
@@ -111,7 +81,7 @@ body {
   height: 50px;
   padding: 10px 16px;
   background-color: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(var(--rgba-white-color), 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
   font-size: 22px;
@@ -121,39 +91,39 @@ body {
 .input:focus,
 .input:active {
   outline: none;
-  border-color: #2196f3;
+  border-color: var(--hover-color);
 }
 
 /* Зовнішні wrapper-оболочки для секцій. Створені щоб можно було задавати макетні фони, або прибирати їх на будь якій інформаційній секіції. В секціях з фоном присутні padding-top padding-bottm. */
 
 .dark-wrapper {
   padding: 60px 0;
-  color: #ffffff;
-  background-color: #2f303a;
+  color: var(--white-color);
+  background-color: var(--dark-background);
 }
 
 .dark-wrapper .navigation-link {
-  color: #ffffff;
+  color: var(--white-color);
 }
 
 .dark-wrapper .input {
-  caret-color: rgba(255, 255, 255, 0.6);
-  color: rgba(255, 255, 255, 0.6);
+  caret-color: rgba(var(--rgba-white-color), 0.6);
+  color: rgba(var(--rgba-white-color), 0.6);
+}
+
+.white-wrapper {
+  padding: var(--vertical-padding) 0;
+  background-color: var(--white-color);
 }
 
 .light-wrapper {
-  padding: 94px 0;
-  background-color: #ffffff;
-}
-
-.grey-wrapper {
-  padding: 94px 0;
-  background-color: #f5f4fa;
+  padding: var(--vertical-padding) 0;
+  background-color: var(--light-background);
 }
 
 /* Якщо wrapper-оболонки з однаковим кольором фону йдуть одна за одною, обнуляємо один з padding-ів. Інакше padding-и додаються й виходит велика візуальна відстань між секціями з однаковим фоновим кольором */
 
-.grey-wrapper + .grey-wrapper {
+.white-wrapper + .white-wrapper {
   padding-top: 0;
 }
 
@@ -161,10 +131,11 @@ body {
   padding-top: 0;
 }
 
+
 /* Внутрішній контейнер для семантичної секціі, який задає ширину для інформаційного контенту й центрує його */
 
 .container {
-  width: 1170px;
+  width: var(--content-width);
   margin: 0 auto;
 }
 
@@ -176,10 +147,8 @@ body {
 
 .navigation-link {
   font-weight: 500;
-  font-size: 14px;
-  line-height: 16px;
   letter-spacing: 0.02em;
-  color: #212121;
+  color: var(--main-color);
   text-decoration: none;
 }
 
@@ -187,10 +156,8 @@ body {
   margin: 0;
   padding: 0;
   margin-bottom: 50px;
-  font-weight: 700;
   font-size: 36px;
-  line-height: 42px;
-  letter-spacing: 0.03em;
+  line-height: 1.17;
   text-align: center;
 }
 
@@ -198,41 +165,35 @@ body {
   margin: 0;
   padding: 0;
   margin-bottom: 10px;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 16px;
-  letter-spacing: 0.03em;
+  font-size: var(--body-font-size);
   text-transform: uppercase;
 }
 
-/** .main {} */
-
 /* Стилізація :hover :focus станів */
-
 
 .navigation-link:hover,
 .navigation-link:focus,
 .footer-contacts:hover,
 .footer-contacts:focus {
-  color: #2196f3;
+  color: var(--hover-color);
   outline: none;
 }
 
 .logotype:focus-visible {
-  outline: 1px solid #2196f3;
+  outline: 1px solid var(--hover-color);
   outline-offset: 0.3em;
   border-radius: 0.03em;
 }
 
 .navigation-link.clients-link:hover,
 .navigation-link.clients-link:focus {
-  border-color: #2196f3;
+  border-color: var(--hover-color);
 }
 
 .navigation-link.clients-link:hover .svg-link,
 .navigation-link.clients-link:focus .svg-link {
   cursor: pointer;
-  fill: #2196f3;
+  fill: var(--hover-color);
 }
 
 /* ЗАГОЛОВОК */
@@ -246,7 +207,7 @@ body {
 .page-navigation .navigation-link::after {
   content: "";
   display: block;
-  border-bottom: 4px solid #2196f3;
+  border-bottom: 4px solid var(--hover-color);
   border-radius: 2px;
   width: 0px;
   position: absolute;
@@ -314,12 +275,25 @@ body {
 }
 
 .navigation-contacts {
-  color: #757575;
+  color: var(--secondary-color);
 }
 
-.this-page {
+.letter-ico,
+.letter-ico-min,
+.phone-ico {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background-size: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+.navigation-link.this-page {
   cursor: default;
-  color: #2196f3;
+  color: var(--hover-color);
 }
 
 /* ОСНОВНА ЧАСТИНА */
@@ -344,7 +318,7 @@ body {
   margin: 0;
   padding: 0;
   margin-bottom: 30px;
-  color: #ffffff;
+  color: var(--white-color);
   font-size: 44px;
   line-height: 60px;
   letter-spacing: 0.06em;
@@ -359,8 +333,6 @@ body {
 
 /* Переваги */
 
-/** .advantages {} */
-
 .advantages-list {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -373,7 +345,7 @@ body {
   height: 120px;
   border-radius: 4px;
   margin-bottom: 55px;
-  background: #f5f4fa;
+  background-color: var(--light-background);
   background-repeat: no-repeat;
   background-size: auto;
   background-position: center;
@@ -398,16 +370,11 @@ body {
 .advantages-text {
   margin: 0;
   padding: 0;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 24px;
-  letter-spacing: 0.03em;
-  color: #757575;
+  line-height: 1.71;
+  color: var(--secondary-color);
 }
 
 /* Чим ми займаємося */
-
-/** .occupation {} */
 
 .occupation-list {
   display: grid;
@@ -432,7 +399,7 @@ body {
   width: 100%;
   margin: 0;
   padding: 27px 1em;
-  color: #ffffff;
+  color: var(--white-color);
   background: rgba(47, 48, 58, 0.8);
   text-align: center;
 }
@@ -446,8 +413,6 @@ body {
 
 /* Наша команда */
 
-/** .team {} */
-
 .team-list {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -458,7 +423,7 @@ body {
   display: flex;
   flex-direction: column;
   padding-bottom: 30px;
-  background-color: #ffffff;
+  background-color: var(--white-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
@@ -473,8 +438,7 @@ body {
 .team-text {
   margin: 0;
   font-size: 16px;
-  line-height: 19px;
-  letter-spacing: 0.03em;
+  line-height: 1.17;
   text-align: center;
 }
 
@@ -483,14 +447,13 @@ body {
   margin-bottom: 10px;
 }
 
+.team-text {
+  color: var(--secondary-color);
+}
+
 .team-inner-box {
   margin: auto 0;
   padding: 0 32px;
-}
-
-.team-text {
-  font-weight: 400;
-  color: #757575;
 }
 
 /* Команда - картки - соціальні мережі */
@@ -519,12 +482,12 @@ body {
 }
 
 .footer .social-list .navigation-link {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(var(--rgba-white-color), 0.1);
 }
 
 .social-list .navigation-link:hover,
 .social-list .navigation-link:focus {
-  background-color: #2196f3;
+  background-color: var(--hover-color);
 }
 
 /* Постійні клієнти */
@@ -538,7 +501,7 @@ body {
 .clients-list .svg-link {
   width: 106px;
   height: 60px;
-  fill: #afb1b8;
+  fill: var(--logos-color);
 }
 
 .clients-link {
@@ -547,13 +510,13 @@ body {
   align-items: center;
   width: 100%;
   height: 92px;
-  border: 1px solid #afb1b8;
+  border: 1px solid var(--logos-color);
   border-radius: 4px;
 }
 
 /* ПОРТФОЛІО */
 .portfolio {
-  padding: 94px 0;
+  padding: var(--vertical-padding) 0;
 }
 
 .product-filter {
@@ -600,7 +563,7 @@ body {
   padding: 0 25px;
   color: initial;
   box-shadow: initial;
-  background-color: #f5f4fa;
+  background-color: var(--light-background);
   line-height: 26px;
 }
 
@@ -611,15 +574,18 @@ body {
   margin: 0;
   padding: 0;
   margin-bottom: 4px;
-  color: #212121;
+  color: var(--main-color);
   font-size: 18px;
   letter-spacing: 0.06em;
   line-height: 200%;
 }
 
 .cards-text {
-  line-height: 188%;
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.88;
   text-align: left;
+  color: var(--secondary-color);
 }
 
 .hover-box {
@@ -633,13 +599,13 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #2196f3;
+  background-color: var(--hover-color);
   opacity: 0.9;
   z-index: -1;
 }
 
 .hover-text {
-  color: #ffffff;
+  color: var(--white-color);
   font-size: 18px;
   line-height: 156%;
   margin: 0;
@@ -676,16 +642,18 @@ body {
 }
 
 .footer .address {
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 24px;
-  letter-spacing: 0.03em;
+  line-height: 1.7;
+  font-style: initial;
+}
+
+.footer-address {
+  color: var(--white-color);
+  text-decoration: initial;
 }
 
 .footer-contacts {
-  text-decoration: none;
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(var(--rgba-white-color), 0.6);
+  text-decoration: initial;
 }
 
 .footer .section-sub-title {
