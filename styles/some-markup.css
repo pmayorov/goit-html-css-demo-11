@@ -1,0 +1,41 @@
+header,
+main,
+footer,
+nav {
+    outline: 1px solid red;
+}
+
+div, form {
+    outline: 1px solid rgb(102, 2, 57);
+}
+
+ul,
+ol,
+dl,
+dt,
+dd
+{
+    outline: 1px solid grey;
+}
+
+
+li {
+  outline: 1px solid lightgreen;
+}
+
+
+h1,
+h2,
+p,
+a,
+span {
+    outline: 1px dashed rgb(59, 116, 182);
+}
+
+img {
+    outline: 1px dashed rgb(20, 212, 107);
+}
+
+section {
+    outline: 1px dotted rgb(218, 115, 46);
+}

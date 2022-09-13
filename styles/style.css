@@ -1,0 +1,701 @@
+:root {
+  /* Кольори проекту */
+
+  --body-font-size: 14px;
+  --main-color: #212121;
+  --secondary-color: #757575;
+  --hover-color: #2196f3;
+  --active-color: #188ce8;
+  --logos-color: #afb1b8;
+  --white-color: #ffffff;
+  --rgba-white-color: 255, 255, 255;
+  --light-background: #f5f4fa;
+  --dark-background: #2f303a;
+  /* Ширина контентної частини сайту */
+  --content-width: 1170px;
+  /* Вертикальні паддінги між секціями на сторінці*/
+  --vertical-padding: 94px;
+  /* var(--param); */
+}
+
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  border: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+}
+
+body {
+  min-width: var(--content-width);
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  color: var(--main-color);
+  box-sizing: border-box;
+}
+
+.button {
+  display: inline-block;
+  box-sizing: border-box;
+  height: 50px;
+  border-width: 0;
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  background-color: var(--hover-color);
+  color: var(--white-color);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+}
+
+.button:hover,
+.button:focus-visible {
+  cursor: pointer;
+  background-color: var(--active-color);
+}
+
+.button:focus-visible,
+.filter-button:focus-visible {
+  outline: 1px solid rgba(var(--rgba-white-color), 0.6);
+  outline-offset: 0.3em;
+}
+
+.filter-button:hover,
+.filter-button:focus-visible {
+  color: var(--white-color);
+  background-color: var(--hover-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
+.input {
+  box-sizing: border-box;
+  width: 358px;
+  height: 50px;
+  padding: 10px 16px;
+  background-color: transparent;
+  border: 1px solid rgba(var(--rgba-white-color), 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  font-size: 22px;
+}
+
+.input:hover,
+.input:focus,
+.input:active {
+  outline: none;
+  border-color: var(--hover-color);
+}
+
+/* Зовнішні wrapper-оболочки для секцій. Створені щоб можно було задавати макетні фони, або прибирати їх на будь якій інформаційній секіції. В секціях з фоном присутні padding-top padding-bottm. */
+
+.dark-wrapper {
+  padding: 60px 0;
+  color: var(--white-color);
+  background-color: var(--dark-background);
+}
+
+.dark-wrapper .navigation-link {
+  color: var(--white-color);
+}
+
+.dark-wrapper .input {
+  caret-color: rgba(var(--rgba-white-color), 0.6);
+  color: rgba(var(--rgba-white-color), 0.6);
+}
+
+.white-wrapper {
+  padding: var(--vertical-padding) 0;
+  background-color: var(--white-color);
+}
+
+.light-wrapper {
+  padding: var(--vertical-padding) 0;
+  background-color: var(--light-background);
+}
+
+/* Якщо wrapper-оболонки з однаковим кольором фону йдуть одна за одною, обнуляємо один з padding-ів. Інакше padding-и додаються й виходит велика візуальна відстань між секціями з однаковим фоновим кольором */
+
+.white-wrapper + .white-wrapper {
+  padding-top: 0;
+}
+
+.light-wrapper + .light-wrapper {
+  padding-top: 0;
+}
+
+
+/* Внутрішній контейнер для семантичної секціі, який задає ширину для інформаційного контенту й центрує його */
+
+.container {
+  width: var(--content-width);
+  margin: 0 auto;
+}
+
+.navigation-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation-link {
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: var(--main-color);
+  text-decoration: none;
+}
+
+.section-title {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 50px;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+}
+
+.section-sub-title {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 10px;
+  font-size: var(--body-font-size);
+  text-transform: uppercase;
+}
+
+/* Стилізація :hover :focus станів */
+
+.navigation-link:hover,
+.navigation-link:focus,
+.footer-contacts:hover,
+.footer-contacts:focus {
+  color: var(--hover-color);
+  outline: none;
+}
+
+.logotype:focus-visible {
+  outline: 1px solid var(--hover-color);
+  outline-offset: 0.3em;
+  border-radius: 0.03em;
+}
+
+.navigation-link.clients-link:hover,
+.navigation-link.clients-link:focus {
+  border-color: var(--hover-color);
+}
+
+.navigation-link.clients-link:hover .svg-link,
+.navigation-link.clients-link:focus .svg-link {
+  cursor: pointer;
+  fill: var(--hover-color);
+}
+
+/* ЗАГОЛОВОК */
+
+/* Лінія знизу в меню хедера */
+
+.page-navigation .navigation-link {
+  position: relative;
+}
+
+.page-navigation .navigation-link::after {
+  content: "";
+  display: block;
+  border-bottom: 4px solid var(--hover-color);
+  border-radius: 2px;
+  width: 0px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+}
+
+.page-navigation .navigation-link.this-page::after,
+.page-navigation .navigation-link:hover::after,
+.page-navigation .navigation-link:focus::after {
+  width: 100%;
+  left: 0;
+  top: 44px;
+}
+
+.logotype {
+  display: inline-block;
+  font-family: "Raleway", sans-serif;
+  font-size: 26px;
+  line-height: 31px;
+  font-weight: 700;
+  color: #000000;
+  text-decoration: none;
+  letter-spacing: 0.03em;
+}
+
+.header .logotype {
+  margin: auto 0;
+}
+
+.logotype .highlight-logo {
+  color: #2196f3;
+}
+
+.header {
+  position: relative;
+  display: flex;
+  min-height: 80px;
+}
+
+/* Підкреслюю [header] наданням секії [main] border-top. ХЗ наскілки це норм рішення? Хеадер знизу не підкреслюю оскільки він стилізован не на всю ширину [body]а лінію за макетом треба на всю ширину сторінки */
+
+.border-top {
+  border-top: 1px solid #ececec;
+  margin-top: -1px;
+}
+
+.page-navigation {
+  display: flex;
+  margin-left: 93px;
+}
+
+.header-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.navigation-list.header-list:last-of-type {
+  margin-left: auto;
+}
+
+.header-list .navigation-item + .navigation-item {
+  margin-left: 50px;
+}
+
+.navigation-contacts {
+  color: var(--secondary-color);
+}
+
+.letter-ico,
+.letter-ico-min,
+.phone-ico {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background-size: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+.navigation-link.this-page {
+  cursor: default;
+  color: var(--hover-color);
+}
+
+/* ОСНОВНА ЧАСТИНА */
+
+/* Банер для замовлення послуги */
+.promo-image {
+  background-image: url("../images/promo.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.order {
+  min-height: 480px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-title {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 30px;
+  color: var(--white-color);
+  font-size: 44px;
+  line-height: 60px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.order .button {
+  min-width: 216px;
+  padding: 1px 32px;
+}
+
+/* Переваги */
+
+.advantages-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 30px;
+}
+
+.advantages-icon {
+  display: block;
+  width: 100%;
+  height: 120px;
+  border-radius: 4px;
+  margin-bottom: 55px;
+  background-color: var(--light-background);
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center;
+}
+
+.navigation-item:nth-of-type(1) .advantages-icon {
+  background-image: url("../images/antenna.svg");
+}
+
+.navigation-item:nth-of-type(2) .advantages-icon {
+  background-image: url("../images/clock.svg ");
+}
+
+.navigation-item:nth-of-type(3) .advantages-icon {
+  background-image: url("../images/diagram.svg");
+}
+
+.navigation-item:nth-of-type(4) .advantages-icon {
+  background-image: url("../images/astronaut.svg");
+}
+
+.advantages-text {
+  margin: 0;
+  padding: 0;
+  line-height: 1.71;
+  color: var(--secondary-color);
+}
+
+/* Чим ми займаємося */
+
+.occupation-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 30px;
+}
+
+.relative-box {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.occupation-sub-title {
+  position: absolute;
+  /* Встановив box-sizing: border-box; бо коли задав бокові паддінги в заголовку то плашка поїхала за межі нижньої ілюстрації */
+  box-sizing: border-box;
+  bottom: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 27px 1em;
+  color: var(--white-color);
+  background: rgba(47, 48, 58, 0.8);
+  text-align: center;
+}
+
+/* Додав цей клас оскільки img штука інлайнова то має знизу якийсь відступ. Після перетворення у блочну модель цей зайвий відступ знизу зникає.   */
+/*todo щось ім'я мені не подобається  */
+
+.image-block {
+  display: block;
+}
+
+/* Наша команда */
+
+.team-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 30px;
+}
+
+.team-list > .navigation-item {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 30px;
+  background-color: var(--white-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+
+.team-image {
+  display: block;
+  margin-bottom: 30px;
+}
+
+.team-sub-title,
+.team-text {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.17;
+  text-align: center;
+}
+
+.team-sub-title {
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.team-text {
+  color: var(--secondary-color);
+}
+
+.team-inner-box {
+  margin: auto 0;
+  padding: 0 32px;
+}
+
+/* Команда - картки - соціальні мережі */
+
+.social-list {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 16px;
+}
+
+/* Закостилив паддінги від країв картки, окількі виніс кнопки соцмереж за обгортку team-inner-box, щоб ці кнопки позиціюнувались знизу при різнії кількості інфи в картках */
+
+.team-list .social-list {
+  padding: 0 32px;
+}
+
+.social-list .navigation-link {
+  display: block;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: transparent;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+
+.footer .social-list .navigation-link {
+  background-color: rgba(var(--rgba-white-color), 0.1);
+}
+
+.social-list .navigation-link:hover,
+.social-list .navigation-link:focus {
+  background-color: var(--hover-color);
+}
+
+/* Постійні клієнти */
+
+.clients-list {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  column-gap: 30px;
+}
+
+.clients-list .svg-link {
+  width: 106px;
+  height: 60px;
+  fill: var(--logos-color);
+}
+
+.clients-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 92px;
+  border: 1px solid var(--logos-color);
+  border-radius: 4px;
+}
+
+/* ПОРТФОЛІО */
+.portfolio {
+  padding: var(--vertical-padding) 0;
+}
+
+.product-filter {
+  padding-bottom: 50px;
+}
+
+.filter-list {
+  display: flex;
+  justify-content: center;
+  column-gap: 8px;
+}
+
+.cards-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.cards-item {
+  display: flex;
+  flex-direction: column;
+  width: 370px;
+  height: 404px;
+  border: 1px solid #eeeeee;
+}
+
+.cards-link {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-decoration: none;
+  flex-grow: 1;
+}
+
+.padding-box {
+  padding: 0 24px;
+  margin: auto 0;
+  overflow: hidden;
+}
+
+.filter-button {
+  height: 38px;
+  padding: 0 25px;
+  color: initial;
+  box-shadow: initial;
+  background-color: var(--light-background);
+  line-height: 26px;
+}
+
+/*! Костильні правила. */
+/* Заплутався в стилізації схожих елементів. Виходить що почав переназначати схожі стилі, криво схрежувати й з найменуваннями вже почалась чехарда! */
+
+.cards-sub-title {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 4px;
+  color: var(--main-color);
+  font-size: 18px;
+  letter-spacing: 0.06em;
+  line-height: 200%;
+}
+
+.cards-text {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.88;
+  text-align: left;
+  color: var(--secondary-color);
+}
+
+.hover-box {
+  position: absolute;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 24px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--hover-color);
+  opacity: 0.9;
+  z-index: -1;
+}
+
+.hover-text {
+  color: var(--white-color);
+  font-size: 18px;
+  line-height: 156%;
+  margin: 0;
+}
+
+.hover-text + .hover-text {
+  margin-top: 0.7em;
+}
+
+.cards-link:hover .hover-box,
+.cards-link:focus-visible .hover-box {
+  z-index: 2;
+}
+
+.cards-link:focus-visible {
+  outline: none;
+}
+
+/* ФУТЕР */
+
+.footer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 30px;
+}
+
+.footer .logotype {
+  color: inherit;
+  margin-bottom: 20px;
+}
+
+.footer .address .navigation-item + .navigation-item {
+  margin-top: 9px;
+}
+
+.footer .address {
+  line-height: 1.7;
+  font-style: initial;
+}
+
+.footer-address {
+  color: var(--white-color);
+  text-decoration: initial;
+}
+
+.footer-contacts {
+  color: rgba(var(--rgba-white-color), 0.6);
+  text-decoration: initial;
+}
+
+.footer .section-sub-title {
+  /* Оці  margin-top: 12px; є костиль! Взагалі потрібно усі сусідні заголовки в футері посадити на базову лінію. А оскількі лівий логотип більше, то трохи все й поїхало. За замовчуванням й з огляду на розмітку все рівняється поверху Іншого варіанту не додумав - втомився, тому поки що так. Якщо розміри заголовків зміняться знову тре буде міняти */
+  margin-top: 12px;
+  margin-bottom: 20px;
+}
+
+.footer .social-list {
+  justify-content: flex-start;
+  column-gap: 10px;
+}
+
+.address-area {
+  grid-column: 1 / 2;
+}
+
+.social-area {
+  grid-column: 2 / 3;
+}
+
+.maillist-area {
+  grid-column: span 2;
+}
+
+.maillist {
+  display: flex;
+  column-gap: 12px;
+}
+
+.maillist .button {
+  padding: 1px 28px;
+}
+
+.button .telegram-ico {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  margin-left: 10px;
+  vertical-align: middle;
+  background-image: url("../images/telegram-ico.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
