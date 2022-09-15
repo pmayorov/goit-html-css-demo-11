@@ -173,6 +173,8 @@ body {
 
 .navigation-link:hover,
 .navigation-link:focus,
+.footer-address:hover,
+.footer-address:focus,
 .footer-contacts:hover,
 .footer-contacts:focus {
   color: var(--hover-color);
